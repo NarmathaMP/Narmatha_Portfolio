@@ -1,0 +1,147 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+/* Base Body: Premium Graphite & Obsidian */
+body {
+  font-family: var(--font-sans);
+  background-color: #090b11;
+  color: #f1f5f9;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(at 20% 10%, rgba(37, 99, 235, 0.08) 0px, transparent 40%),
+    radial-gradient(at 80% 20%, rgba(99, 102, 241, 0.06) 0px, transparent 35%),
+    radial-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 0);
+  background-size: 100% 100%, 100% 100%, 28px 28px;
+  background-attachment: fixed;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Professional Glass Card */
+.pro-card {
+  background: rgba(14, 18, 27, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.pro-card:hover {
+  border-color: rgba(59, 130, 246, 0.35);
+  box-shadow: 0 20px 40px -15px rgba(37, 99, 235, 0.12);
+}
+
+.pro-card-sub {
+  background: rgba(19, 24, 36, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.2s ease;
+}
+
+.pro-card-sub:hover {
+  border-color: rgba(59, 130, 246, 0.3);
+  background: rgba(23, 30, 46, 0.85);
+}
+
+/* High-Contrast Light Theme Overrides */
+html.light body,
+.light body {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+  background-image: 
+    radial-gradient(at 20% 10%, rgba(37, 99, 235, 0.05) 0px, transparent 40%),
+    radial-gradient(at 80% 20%, rgba(99, 102, 241, 0.04) 0px, transparent 35%),
+    radial-gradient(rgba(15, 23, 42, 0.035) 1px, transparent 0) !important;
+}
+
+html.light .pro-card {
+  background: rgba(255, 255, 255, 0.92) !important;
+  border-color: rgba(15, 23, 42, 0.09) !important;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02) !important;
+}
+
+html.light .pro-card:hover {
+  border-color: rgba(37, 99, 235, 0.35) !important;
+  box-shadow: 0 20px 40px -15px rgba(37, 99, 235, 0.08) !important;
+}
+
+html.light .pro-card-sub {
+  background: #f1f5f9 !important;
+  border-color: rgba(15, 23, 42, 0.07) !important;
+}
+
+html.light .text-white {
+  color: #0f172a !important;
+}
+
+html.light .text-slate-100 {
+  color: #0f172a !important;
+}
+
+html.light .text-slate-200 {
+  color: #1e293b !important;
+}
+
+html.light .text-slate-300 {
+  color: #334155 !important;
+}
+
+html.light .text-slate-400 {
+  color: #64748b !important;
+}
+
+html.light header {
+  background-color: rgba(255, 255, 255, 0.88) !important;
+  border-bottom-color: rgba(15, 23, 42, 0.08) !important;
+}
+
+html.light input,
+html.light textarea,
+html.light select {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: rgba(15, 23, 42, 0.15) !important;
+}
+
+html.light input::placeholder,
+html.light textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Subtle Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+html.light ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
