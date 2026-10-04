@@ -18,3 +18,5 @@ View your app in AI Studio: https://ai.studio/apps/d0cfe9e1-6a53-461c-859b-ed329
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+# Narmatha_Portfolio
+A professional, responsive personal portfolio website designed to showcase my technical skills, projects, and experience with a focus on clean UI, performance, and accessibility.
