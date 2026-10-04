@@ -314,12 +314,6 @@ function PortfolioApp() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             {/* Left 7 Columns: Pitch & Credentials */}
             <div className="lg:col-span-7 space-y-6">
-              {/* Availability Badge */}
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-950/60 border border-blue-800/60 text-xs font-mono text-blue-300">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                <span>Available for Full-Time Roles & Internships · Batch 2026</span>
-              </div>
-
               {/* Bold Executive Headline */}
               <div className="space-y-2">
                 <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-[1.15]">
